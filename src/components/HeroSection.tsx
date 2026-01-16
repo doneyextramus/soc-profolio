@@ -1,5 +1,6 @@
 import { Shield, Terminal, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profileImage from "@/assets/profile.jpg";
 
 const HeroSection = () => {
   return (
@@ -19,6 +20,19 @@ const HeroSection = () => {
             <Terminal className="w-4 h-4" />
             <span className="opacity-70">~/security$</span>
             <span className="animate-pulse">_</span>
+          </div>
+
+          {/* Profile Image */}
+          <div className="relative">
+            <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary/70 shadow-[0_0_30px_hsl(var(--primary)/0.4)]">
+              <img 
+                src={profileImage} 
+                alt="Doney Biju John" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Decorative ring */}
+            <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse scale-110" />
           </div>
 
           {/* Name with glow effect */}
